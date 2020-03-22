@@ -1,5 +1,3 @@
 *.pdf
 *.sql
-input_files/*
-!input_files/.gitignore
 utils/__pycache__/*
