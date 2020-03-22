@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+    db:
+      image: postgres
+      environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=admin
+        - POSTGRES_DB=indicium
+      ports:
+        - "5430:5432"
+      # Create the table in PostgreSQL
+      volumes:
+        - ./sql/create-table.sql:/docker-entrypoint-initdb.d/1-init.sql
+      deploy:
+        restart_policy:
+          condition: on-failure
+        resources:
+          limits:
+            cpus: '0.30'
+            memory: 2048M
+          reservations:
+            cpus: '0.10'
+            memory: 1024M
+          
+    app:
+        build: .
+        depends_on: 
+          - db
+        links:
+          - db
+        volumes:
+            - .:/python/src/indicium
+        working_dir: /python/src/indicium
+        command: ["./wait-for-it.sh", "db:5432","--", "python", "main.py"]
+    
