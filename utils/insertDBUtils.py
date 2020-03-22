@@ -13,6 +13,5 @@ def insert_db(df, filename, con, cur):
         con.commit()
     except Exception as e:
         print(e)
-        # print ("Table " + filename + " does not exist.")
 
     return
