@@ -21,6 +21,10 @@ git clone https://github.com/mateusolvr/indicium.git
 
 The files wished to be inserted into the database must be .tsv and put inside the folder `./indicium/input_files/`
 
+### - Output Files
+
+There are two .sql files with queries inside the folder `output_sql_files`. These queries are the ones requested in the challenge.
+
 ### - Execution
 
 <!-- Use the file `config.json.example` to create a `config.json` file with the parameters to connect to your database. -->
