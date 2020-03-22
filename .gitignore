@@ -1,3 +1,2 @@
 *.pdf
-*.sql
 utils/__pycache__/*
