@@ -14,7 +14,7 @@ Git also must be installed. It's possible to download it here: [link](https://gi
 
 Clone the application inside a folder:
 ```console
-git clone https://github.com/mateusolvr/indicium.git
+git clone https://github.com/mateusolvr/python_etl.git
 ```
 
 ### - Files
