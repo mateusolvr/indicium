@@ -1,4 +1,4 @@
-# Study Challenge
+# Study Challenge: ETL (Python, PostgreSQL and Docker-Compose)
 
 This program was built with the purpose of extracting the data from .tsv files using Python programming language and inserting them into a PostgreSQL database and later use this data to generate some outputs or insights, in another words, a little ETL. It is all done using docker-compose.
 
